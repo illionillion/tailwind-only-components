@@ -12,10 +12,18 @@ type Story = StoryFn<typeof Button>
 
 export const Default: Story = () => (
     <Button>
+        button
     </Button>
 )
 
 export const Outline: Story = () => (
-    <Button>
+    <Button variant="outline">
+        button
+    </Button>
+)
+
+export const Disabled: Story = () => (
+    <Button variant="outline" disabled>
+        button
     </Button>
 )
