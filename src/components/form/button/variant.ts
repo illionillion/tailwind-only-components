@@ -11,7 +11,13 @@ export const buttonVariants = cva(
 
     // Disabled state
     "disabled:cursor-not-allowed",
-    "disabled:opacity-50"
+    "disabled:opacity-50",
+    "disabled:hover:bg-transparent",
+    "disabled:active:bg-transparent",
+    "disabled:hover:text-current",
+    "disabled:active:text-current",
+    "disabled:hover:border-current",
+    "disabled:active:border-current"
   ),
   {
     variants: {
@@ -21,7 +27,11 @@ export const buttonVariants = cva(
           "bg-blue-500",
           "text-white",
           "hover:bg-blue-700",
-          "active:bg-blue-800"
+          "active:bg-blue-800",
+          "disabled:hover:bg-blue-500",
+          "disabled:active:bg-blue-500",
+          "disabled:hover:text-white",
+          "disabled:active:text-white"
         ),
         outline: clsx(
           "border",
@@ -30,7 +40,13 @@ export const buttonVariants = cva(
           "hover:text-white",
           "hover:bg-blue-500",
           "active:bg-blue-800",
-          "active:border-blue-800"
+          "active:border-blue-800",
+          "disabled:hover:text-blue-500",
+          "disabled:active:text-blue-500",
+          "disabled:hover:bg-transparent",
+          "disabled:active:bg-transparent",
+          "disabled:hover:border-blue-500",
+          "disabled:active:border-blue-500"
         ),
       },
 
