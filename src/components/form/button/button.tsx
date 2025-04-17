@@ -20,7 +20,7 @@ export function Button({
     size,
     display,
     m,
-    p = "md",
+    p,
     gap,
 }: ButtonProps) {
     return <button
