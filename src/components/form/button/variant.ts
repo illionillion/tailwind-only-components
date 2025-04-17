@@ -1,22 +1,47 @@
 import { cva } from "class-variance-authority";
+import clsx from "clsx";
 
 export const buttonVariants = cva(
-  "rounded transition-colors focus:outline-none select-none disabled:cursor-not-allowed disabled:opacity-50",
+  clsx(
+    // Base styles
+    "rounded",
+    "transition-colors",
+    "focus:outline-none",
+    "select-none",
+
+    // Disabled state
+    "disabled:cursor-not-allowed",
+    "disabled:opacity-50"
+  ),
   {
     variants: {
+      // Design variants
       variant: {
-        default: "bg-blue-500 text-white hover:bg-blue-700 active:bg-blue-800",
-        outline:
-          "border border-blue-500 text-blue-500 hover:text-white hover:bg-blue-500 active:bg-blue-800 active:border-blue-800",
+        default: clsx(
+          "bg-blue-500",
+          "text-white",
+          "hover:bg-blue-700",
+          "active:bg-blue-800"
+        ),
+        outline: clsx(
+          "border",
+          "border-blue-500",
+          "text-blue-500",
+          "hover:text-white",
+          "hover:bg-blue-500",
+          "active:bg-blue-800",
+          "active:border-blue-800"
+        ),
       },
 
+      // Size variants
       size: {
         sm: "text-sm",
         md: "text-base",
         lg: "text-lg",
       },
 
-      // Tailwind utilitiesをプロップで扱う
+      // Spacing utilities
       p: {
         sm: "p-1",
         md: "p-2",
@@ -32,6 +57,8 @@ export const buttonVariants = cva(
         md: "gap-2",
         lg: "gap-4",
       },
+
+      // Layout utilities
       display: {
         block: "block",
         inline: "inline",
